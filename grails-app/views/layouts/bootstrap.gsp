@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -36,8 +36,9 @@
 					<a class="brand" href="#"><g:meta name="app.name"/></a>
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+							<li><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+						</g:each>
 					</ul>
 
 					<p class="pull-right">Logged in as <a href="#">username</a></p>
