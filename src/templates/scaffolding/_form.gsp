@@ -34,7 +34,7 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 		required = (cp ? !(cp.propertyType in [boolean, Boolean]) && !cp.nullable && (cp.propertyType != String || !cp.blank) : false)
 	}
 	if (display) { %>
-<div class="clearfix \${hasErrors(bean: ${propertyName}, field: '${prefix}${p.name}', 'error')} ${required ? 'warning' : ''}">
+<div class="clearfix \${hasErrors(bean: ${propertyName}, field: '${prefix}${p.name}', 'error')}">
 	<label for="${prefix}${p.name}">
 		<g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
 	</label>
