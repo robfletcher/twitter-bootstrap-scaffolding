@@ -17,6 +17,7 @@ class Person {
 		lastName blank: false
 		email nullable: true, email: true
 		dateOfBirth nullable: true
+		address nullable: true
     }
 }
 

@@ -38,6 +38,9 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 	<label for="${prefix}${p.name}">
 		<g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
 	</label>
-	<div class="input">${renderEditor(p)}</div>
+	<div class="input">
+		${renderEditor(p)}
+		<bootstrap:fieldError bean="\${${propertyName}}" field="${prefix}${p.name}"/>
+	</div>
 </div>
 <%  }   } %>
