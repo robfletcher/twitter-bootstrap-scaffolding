@@ -37,7 +37,7 @@
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
 						<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-							<li><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+							<li><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
 						</g:each>
 					</ul>
 

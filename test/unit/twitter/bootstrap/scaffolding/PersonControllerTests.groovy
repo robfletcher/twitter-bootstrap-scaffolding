@@ -1,4 +1,6 @@
-@artifact.package@
+package twitter.bootstrap.scaffolding
+
+
 
 import grails.test.mixin.*
 import org.junit.*
@@ -6,8 +8,8 @@ import org.junit.*
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(@artifact.testclass@)
-class @artifact.name@ {
+@TestFor(PersonController)
+class PersonControllerTests {
 
     void testSomething() {
        fail "Implement me"
