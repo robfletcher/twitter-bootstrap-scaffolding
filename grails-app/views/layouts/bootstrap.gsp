@@ -38,11 +38,11 @@
 					<ul class="nav">
 						<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 							<g:if test="${c.hasProperty('navigation')}">
-								<li class="dropdown" data-dropdown="dropdown">
+								<li class="dropdown ${controllerName == c.logicalPropertyName ? 'active' : ''}" data-dropdown="dropdown">
 									<a href="#" class="dropdown-toggle">${c.naturalName}</a>
 									<ul class="dropdown-menu">
 										<g:each var="action" in="${c.clazz.navigation}">
-											<li><g:link controller="${c.logicalPropertyName}" action="${action}">${action}</g:link>
+											<li class="${controllerName == c.logicalPropertyName && actionName == action ? 'active' : ''}"><g:link controller="${c.logicalPropertyName}" action="${action}">${action}</g:link>
 										</g:each>
 									</ul>
 								</li>

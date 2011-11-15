@@ -4,7 +4,7 @@ This is an experimental Grails project using Twitter Bootstrap for scaffolded vi
 
 ## To-do
 
-* highlight current nav item
+* highlight nav sub-item based on view rather than action
 * sortable columns
 * pagination
 * required fields
