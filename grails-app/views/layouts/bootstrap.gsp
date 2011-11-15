@@ -33,11 +33,23 @@
 		<div class="topbar">
 			<div class="topbar-inner">
 				<div class="container-fluid">
-					<a class="brand" href="#"><g:meta name="app.name"/></a>
+					<a class="brand" href="${resource(url: '/')}"><g:meta name="app.name"/></a>
+
 					<ul class="nav">
-						<li class="active"><a href="#">Home</a></li>
 						<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-							<li><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
+							<g:if test="${c.hasProperty('navigation')}">
+								<li class="dropdown" data-dropdown="dropdown">
+									<a href="#" class="dropdown-toggle">${c.naturalName}</a>
+									<ul class="dropdown-menu">
+										<g:each var="action" in="${c.clazz.navigation}">
+											<li><g:link controller="${c.logicalPropertyName}" action="${action}">${action}</g:link>
+										</g:each>
+									</ul>
+								</li>
+							</g:if>
+							<g:else>
+								<li><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
+							</g:else>
 						</g:each>
 					</ul>
 

@@ -4,7 +4,7 @@ This is an experimental Grails project using Twitter Bootstrap for scaffolded vi
 
 ## To-do
 
-* dropdown menus for controller actions
+* highlight current nav item
 * sortable columns
 * pagination
 * required fields

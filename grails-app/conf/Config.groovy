@@ -63,6 +63,7 @@ grails.hibernate.cache.queries = true
 environments {
     development {
         grails.logging.jul.usebridge = true
+		grails.resources.debug = true
     }
     production {
         grails.logging.jul.usebridge = false
@@ -110,3 +111,5 @@ grails.gorm.default.mapping = {
 }
 
 jodatime.format.html5 = true
+
+grails.plugins.twitterbootstrap.fixtaglib = true
