@@ -8,6 +8,9 @@ class Person {
 	String lastName
 	String email
 	LocalDate dateOfBirth
+	Address address
+	
+	static embedded = ["address"]
 
     static constraints = {
 		firstName blank: false
@@ -16,3 +19,4 @@ class Person {
 		dateOfBirth nullable: true
     }
 }
+
