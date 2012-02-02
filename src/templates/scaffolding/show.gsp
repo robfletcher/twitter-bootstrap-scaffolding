@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<h1><g:message code="default.show.label" args="[entityName]" /></h1>
-		<div class="row">
-			<div class="span16">
+		<div class="row-fluid">
+			<div class="span12">
 
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
@@ -45,9 +45,9 @@
 
 				<g:form>
 					<g:hiddenField name="id" value="\${${propertyName}?.id}" />
-					<div class="actions">
+					<div class="form-actions">
 						<g:link class="btn" action="edit" id="\${${propertyName}?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-						<g:actionSubmit class="btn danger" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" />
+						<button class="btn btn-danger" type="submit" name="_action_delete"><g:message code="default.button.delete.label" default="Delete" /></button>
 					</div>
 				</g:form>
 

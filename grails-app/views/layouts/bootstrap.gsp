@@ -1,8 +1,9 @@
+<%@ page import="org.codehaus.groovy.grails.web.servlet.GrailsApplicationAttributes" %>
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title><g:layoutTitle default="Grails"/></title>
+		<title><g:layoutTitle default="${meta(name: 'app.name')}"/></title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 
@@ -21,45 +22,45 @@
 
 		<g:layoutHead/>
 		<r:layoutResources/>
-		<style type="text/css">
-		body {
-			padding-top: 60px;
-		}
-		</style>
+	    <style>
+	      body {
+	        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	      }
+	    </style>
 	</head>
 
 	<body>
 
-		<div class="topbar">
-			<div class="topbar-inner">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
 				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="i-bar"></span>
+						<span class="i-bar"></span>
+						<span class="i-bar"></span>
+					</a>
 					<a class="brand" href="${resource(url: '/')}"><g:meta name="app.name"/></a>
 
-					<ul class="nav">
-						<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-							<g:if test="${c.hasProperty('navigation')}">
-								<li class="dropdown ${controllerName == c.logicalPropertyName ? 'active' : ''}" data-dropdown="dropdown">
-									<a href="#" class="dropdown-toggle">${c.naturalName}</a>
-									<ul class="dropdown-menu">
-										<g:each var="action" in="${c.clazz.navigation}">
-											<li class="${controllerName == c.logicalPropertyName && actionName == action ? 'active' : ''}"><g:link controller="${c.logicalPropertyName}" action="${action}">${action}</g:link>
-										</g:each>
-									</ul>
-								</li>
-							</g:if>
-							<g:else>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="active"><a href="${resource(uri: '/')}">Home</a></li>
+							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 								<li><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
-							</g:else>
-						</g:each>
-					</ul>
-
-					<p class="pull-right">Logged in as <a href="#">username</a></p>
+							</g:each>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="container-fluid">
 			<g:layoutBody/>
+
+			<hr>
+
+			<footer>
+				<p>&copy; Company 2011</p>
+			</footer>
 		</div>
 
 		<r:layoutResources/>

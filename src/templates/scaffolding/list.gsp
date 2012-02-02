@@ -9,12 +9,12 @@
 	</head>
 	<body>
 		<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-		<div class="row">
-			<div class="span16">
+		<div class="row-fluid">
+			<div class="span12">
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
 				</g:if>
-				<table class="zebra-striped">
+				<table class="table table-striped">
 					<thead>
 						<tr>
 						<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'

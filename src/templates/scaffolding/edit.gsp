@@ -8,8 +8,8 @@
 	</head>
 	<body>
 		<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
-		<div class="row">
-			<div class="span16">
+		<div class="row-fluid">
+			<div class="span12">
 
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
@@ -25,14 +25,14 @@
 				</bootstrap:alert>
 				</g:hasErrors>
 
-				<g:form method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+				<g:form class="form-horizontal" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 					<g:hiddenField name="id" value="\${${propertyName}?.id}" />
 					<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 					<fieldset>
-						<g:render template="form"/>
-						<div class="actions">
-							<g:actionSubmit class="btn primary" action="update" value="\${message(code: 'default.button.update.label', default: 'Update')}" />
-							<g:actionSubmit class="btn danger" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" formnovalidate="" />
+						<f:all bean="${propertyName}"/>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary" name="_action_update"><g:message code="default.button.update.label" default="Update" /></button>
+							<button type="submit" class="btn btn-danger" name="_action_delete" formnovalidate><g:message code="default.button.delete.label" default="Delete" /></button>
 						</div>
 					</fieldset>
 				</g:form>

@@ -8,8 +8,8 @@
 	</head>
 	<body>
 		<h1><g:message code="default.create.label" args="[entityName]" /></h1>
-		<div class="row">
-			<div class="span16">
+		<div class="row-fluid">
+			<div class="span12">
 
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
@@ -25,11 +25,12 @@
 				</bootstrap:alert>
 				</g:hasErrors>
 
-				<g:form action="save" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+				<g:form class="form-horizontal" action="save" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 					<fieldset>
+						<f:all bean="${propertyName}"/>
 						<g:render template="form"/>
-						<div class="actions">
-							<g:submitButton name="create" class="btn primary" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
+						<div class="form-actions">
+							<button type="submit" name="create" class="btn btn-primary"><g:message code="default.button.create.label" default="Create" /></button>
 						</div>
 					</fieldset>
 				</g:form>
