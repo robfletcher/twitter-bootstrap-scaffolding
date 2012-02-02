@@ -49,7 +49,7 @@
 					</tbody>
 				</table>
 				<div class="pagination">
-					<g:paginate total="\${${propertyName}Total}" />
+					<bootstrap:paginate total="\${${propertyName}Total}" />
 				</div>
 			</div>
 		</div>

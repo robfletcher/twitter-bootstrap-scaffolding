@@ -6,5 +6,10 @@ class Address {
 	String address2
 	String city
 	String postCode
+	
+	@Override
+	String toString() {
+		[address1, address2, city, postCode].findAll { it }.join(', ')
+	}
 
 }
