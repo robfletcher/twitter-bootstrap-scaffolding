@@ -54,15 +54,17 @@ class PaginationTagLib {
 		writer << '<ul>'
 
         // display previous link when not on firststep
-		linkTagAttrs.class = 'prevLink'
-		linkParams.offset = offset - max
-		writer << '<li'
-		if (currentstep == firststep) writer << ' class="disabled"'
-		writer << '>'
-		def prevLinkAttrs = linkTagAttrs.clone()
-		prevLinkAttrs += [title: (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))]
-		writer << link(prevLinkAttrs, '&laquo;')
-		writer << '</li>'
+		if (laststep > firststep) {
+			linkTagAttrs.class = 'prevLink'
+			linkParams.offset = offset - max
+			writer << '<li'
+			if (currentstep == firststep) writer << ' class="disabled"'
+			writer << '>'
+			def prevLinkAttrs = linkTagAttrs.clone()
+			prevLinkAttrs += [title: (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))]
+			writer << link(prevLinkAttrs, '&laquo;')
+			writer << '</li>'
+		}
 
         // display steps when steps are enabled and laststep is not firststep
         if (steps && laststep > firststep) {
@@ -96,15 +98,18 @@ class PaginationTagLib {
         }
 
         // display next link when not on laststep
-		linkTagAttrs.class = 'nextLink'
-		linkParams.offset = offset + max
-		writer << '<li'
-		if (currentstep == laststep) writer << ' class="disabled"'
-		writer << '>'
-		def nextLinkAttrs = linkTagAttrs.clone()
-		nextLinkAttrs += [title: (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))]
-		writer << link(nextLinkAttrs, '&raquo;')
-		writer << '</li>'
+		if (laststep > firststep) {
+			linkTagAttrs.class = 'nextLink'
+			linkParams.offset = offset + max
+			writer << '<li'
+			if (currentstep == laststep) writer << ' class="disabled"'
+			writer << '>'
+			def nextLinkAttrs = linkTagAttrs.clone()
+			nextLinkAttrs += [title: (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))]
+			writer << link(nextLinkAttrs, '&raquo;')
+			writer << '</li>'
+		}
+		
 		writer << '</ul>'
 	}
 
