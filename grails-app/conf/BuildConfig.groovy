@@ -31,6 +31,7 @@ grails.project.dependency.resolution = {
         compile ":jquery:1.7.1"
         compile ":resources:1.1.6"
 
+		runtime ":twitter-bootstrap:2.0.0.16"
 		runtime ":fields:1.0"
 
         build ":tomcat:$grailsVersion"

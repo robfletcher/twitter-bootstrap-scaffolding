@@ -1,0 +1,23 @@
+@media (min-width:980px) {
+	body { 
+		padding-top: 60px; 
+	}
+}
+
+h1 {
+	margin-bottom: 18px;
+}
+
+pre.snippet code.line {
+	border: none;
+	display: block;
+}
+
+pre.snippet .lineNumber {
+	display: inline-block;
+	width: 3em;
+}
+
+pre.snippet .error {
+	font-weight: bold;
+}
