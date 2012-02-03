@@ -36,11 +36,11 @@
 						<span class="icon-bar"></span>
 					</a>
 					
-					<a class="brand" href="${resource(url: '/')}"><g:meta name="app.name"/></a>
+					<a class="brand" href="${createLink(uri: '/')}"><g:meta name="app.name"/></a>
 
 					<div class="nav-collapse">
 						<ul class="nav">							
-							<li<%= request.forwardURI ==~ /${createLink(url: '/')}\/?/ ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
+							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
 							</g:each>
