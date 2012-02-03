@@ -14,8 +14,18 @@
 				<div class="well">
 					<ul class="nav nav-list">
 						<li class="nav-header">\${entityName}</li>
-						<li class="active"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-						<li><g:link class="create" action="create"><g:message code="default.create.label" args="[entityName]" /></g:link></li>
+						<li class="active">
+							<g:link class="list" action="list">
+								<i class="icon-list icon-white"></i>
+								<g:message code="default.list.label" args="[entityName]" />
+							</g:link>
+						</li>
+						<li>
+							<g:link class="create" action="create">
+								<i class="icon-plus"></i>
+								<g:message code="default.create.label" args="[entityName]" />
+							</g:link>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -30,6 +40,7 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
+							<th></th>
 						<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 							allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 							props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && it.type != null && !Collection.isAssignableFrom(it.type) }
@@ -46,10 +57,9 @@
 					<tbody>
 					<g:each in="\${${propertyName}List}" var="${propertyName}">
 						<tr>
+							<td><g:link action="show" id="\${${propertyName}.id}"><i class="icon-eye-open"></g:link></td>
 						<%  props.eachWithIndex { p, i ->
-								if (i == 0) { %>
-							<td><g:link action="show" id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</g:link></td>
-						<%      } else if (i < 6) {
+						        if (i < 6) {
 									if (p.type == Boolean || p.type == boolean) { %>
 							<td><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /></td>
 						<%          } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>

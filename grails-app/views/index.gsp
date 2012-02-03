@@ -44,8 +44,8 @@
 
 				<div class="row-fluid">
 					<div class="span12">
-						<h2>Available Controllers:</h2>
-						<ul>
+						<ul class="nav nav-list">
+							<li class="nav-header">Available Controllers:</li>
 							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 								<li><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 							</g:each>

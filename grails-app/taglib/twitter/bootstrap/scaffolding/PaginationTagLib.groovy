@@ -62,7 +62,7 @@ class PaginationTagLib {
 			writer << '>'
 			def prevLinkAttrs = linkTagAttrs.clone()
 			prevLinkAttrs += [title: (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))]
-			writer << link(prevLinkAttrs, '&laquo;')
+			writer << link(prevLinkAttrs, '<i class="icon-chevron-left"></i>')
 			writer << '</li>'
 		}
 
@@ -106,7 +106,7 @@ class PaginationTagLib {
 			writer << '>'
 			def nextLinkAttrs = linkTagAttrs.clone()
 			nextLinkAttrs += [title: (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))]
-			writer << link(nextLinkAttrs, '&raquo;')
+			writer << link(nextLinkAttrs, '<i class="icon-chevron-right"></i>')
 			writer << '</li>'
 		}
 		
