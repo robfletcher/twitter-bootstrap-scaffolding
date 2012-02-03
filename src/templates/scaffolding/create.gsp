@@ -25,11 +25,11 @@
 				</bootstrap:alert>
 				</g:hasErrors>
 
-				<g:form class="form-horizontal" action="save" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+				<g:form class="form-horizontal" action="create" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 					<fieldset>
 						<f:all bean="${propertyName}"/>
 						<div class="form-actions">
-							<button type="submit" name="create" class="btn btn-primary"><g:message code="default.button.create.label" default="Create" /></button>
+							<button type="submit" class="btn btn-primary"><g:message code="default.button.create.label" default="Create" /></button>
 						</div>
 					</fieldset>
 				</g:form>

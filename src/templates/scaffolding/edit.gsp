@@ -25,13 +25,12 @@
 				</bootstrap:alert>
 				</g:hasErrors>
 
-				<g:form class="form-horizontal" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
-					<g:hiddenField name="id" value="\${${propertyName}?.id}" />
+				<g:form class="form-horizontal" action="edit" id="\${${propertyName}?.id}" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 					<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 					<fieldset>
 						<f:all bean="${propertyName}"/>
 						<div class="form-actions">
-							<button type="submit" class="btn btn-primary" name="_action_update"><g:message code="default.button.update.label" default="Update" /></button>
+							<button type="submit" class="btn btn-primary"><g:message code="default.button.update.label" default="Update" /></button>
 							<button type="submit" class="btn btn-danger" name="_action_delete" formnovalidate><g:message code="default.button.delete.label" default="Delete" /></button>
 						</div>
 					</fieldset>
