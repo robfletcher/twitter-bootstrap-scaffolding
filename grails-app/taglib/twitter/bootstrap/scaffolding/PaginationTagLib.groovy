@@ -59,9 +59,9 @@ class PaginationTagLib {
 		writer << '<li'
 		if (currentstep == firststep) writer << ' class="disabled"'
 		writer << '>'
-		writer << link(linkTagAttrs.clone()) {
-		    (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))
-		}
+		def prevLinkAttrs = linkTagAttrs.clone()
+		prevLinkAttrs += [title: (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))]
+		writer << link(prevLinkAttrs, '&laquo;')
 		writer << '</li>'
 
         // display steps when steps are enabled and laststep is not firststep
@@ -101,9 +101,9 @@ class PaginationTagLib {
 		writer << '<li'
 		if (currentstep == laststep) writer << ' class="disabled"'
 		writer << '>'
-		writer << link(linkTagAttrs.clone()) {
-		    (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))
-		}
+		def nextLinkAttrs = linkTagAttrs.clone()
+		nextLinkAttrs += [title: (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))]
+		writer << link(nextLinkAttrs, '&raquo;')
 		writer << '</li>'
 		writer << '</ul>'
 	}
