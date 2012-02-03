@@ -24,8 +24,9 @@
 				<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 
 				<g:if test="\${flash.message}">
-				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
+				<bootstrap:alert class="alert-info">\${flash.message}</bootstrap:alert>
 				</g:if>
+				
 				<table class="table table-striped">
 					<thead>
 						<tr>

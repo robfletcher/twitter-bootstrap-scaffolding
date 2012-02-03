@@ -24,11 +24,11 @@
 				<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 
 				<g:if test="\${flash.message}">
-				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
+				<bootstrap:alert class="alert-info">\${flash.message}</bootstrap:alert>
 				</g:if>
 
 				<g:hasErrors bean="\${${propertyName}}">
-				<bootstrap:alert class="block-message error">
+				<bootstrap:alert class="alert-error">
 				<ul>
 					<g:eachError bean="\${${propertyName}}" var="error">
 					<li <g:if test="\${error in org.springframework.validation.FieldError}">data-field-id="\${error.field}"</g:if>><g:message error="\${error}"/></li>

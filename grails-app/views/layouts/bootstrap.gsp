@@ -12,7 +12,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<r:require modules="bootstrap"/>
+		<r:require modules="grails"/>
 
 		<!-- Le fav and touch icons -->
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -22,11 +22,6 @@
 
 		<g:layoutHead/>
 		<r:layoutResources/>
-	    <style>
-			@media (min-width:980px) {
-				body { padding-top: 60px; }
-			}
-	    </style>
 	</head>
 
 	<body>
