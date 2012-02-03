@@ -23,9 +23,9 @@
 		<g:layoutHead/>
 		<r:layoutResources/>
 	    <style>
-	      body {
-	        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-	      }
+			@media (min-width:980px) {
+				body { padding-top: 60px; }
+			}
 	    </style>
 	</head>
 
@@ -34,18 +34,20 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
+					
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="i-bar"></span>
-						<span class="i-bar"></span>
-						<span class="i-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
 					</a>
+					
 					<a class="brand" href="${resource(url: '/')}"><g:meta name="app.name"/></a>
 
 					<div class="nav-collapse">
-						<ul class="nav">
-							<li class="active"><a href="${resource(uri: '/')}">Home</a></li>
+						<ul class="nav">							
+							<li<%= request.forwardURI ==~ /${createLink(url: '/')}\/?/ ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-								<li><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
+								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
 							</g:each>
 						</ul>
 					</div>

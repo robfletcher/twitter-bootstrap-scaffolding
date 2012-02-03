@@ -8,9 +8,21 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 		<div class="row-fluid">
-			<div class="span12">
+			
+			<div class="span3">
+				<div class="well">
+					<ul class="nav nav-list">
+						<li class="nav-header">\${entityName}</li>
+						<li class="active"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+						<li><g:link class="create" action="create"><g:message code="default.create.label" args="[entityName]" /></g:link></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="span9">
+				<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="block-message info">\${flash.message}</bootstrap:alert>
 				</g:if>
@@ -52,6 +64,7 @@
 					<bootstrap:paginate total="\${${propertyName}Total}" />
 				</div>
 			</div>
+
 		</div>
 	</body>
 </html>
