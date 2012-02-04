@@ -13,6 +13,7 @@ You can either use this project as a template or to add to an existing Grails ap
    * `web-app/css/scaffolding.css`
    * `grails-app/conf/ScaffoldingResources.groovy`
    * `grails-app/taglib/**/*`
+   * `grails-app/views/_fields/default/_field.gsp`
 
 ## To-do
 
