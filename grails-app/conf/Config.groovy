@@ -67,7 +67,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-        grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://grails-twitter-bootstrap.cloudfoundry.com"
     }
 }
 
@@ -113,3 +113,5 @@ grails.gorm.default.mapping = {
 jodatime.format.html5 = true
 
 grails.plugins.twitterbootstrap.fixtaglib = true
+
+grails.plugin.cloudfoundry.appname = 'grails-twitter-bootstrap'
