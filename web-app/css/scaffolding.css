@@ -8,6 +8,20 @@ h1 {
 	margin-bottom: 18px;
 }
 
+/* index page */
+
+img#github-ribbon {
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	border: 0;
+}
+
+@media (max-width: 980px) {
+	img#github-ribbon {
+		top: 50px; 
+	}
+}
 pre.snippet code.line {
 	border: none;
 	display: block;
