@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="bootstrap"/>
-		<title>Welcome to Grails</title>
+		<title>Grails Twitter Bootstrap Scaffolding</title>
 	</head>
 
 	<body>
@@ -32,15 +32,35 @@
 			<section id="main" class="span9">
 
 				<div class="hero-unit">
-					<p>Congratulations, you have successfully started your first Grails application! At the moment
-					this is the default page, feel free to modify it to either redirect to a controller or display whatever
-					content you may choose. Below is a list of controllers that are currently deployed in this application,
-					click on each to execute its default action:</p>
 					<div class="page-header">
 						<h1>Welcome to Grails</h1>
 					</div>
 
-					<p><a href="http://grails.org/" class="btn primary large">Learn more &raquo;</a></p>
+					<p>Grails scaffolding with a <a href="http://twitter.github.com/bootstrap" rel="external"><em>Twitter
+					Bootstrap</em></a> look &amp; feel?</p>
+					
+					<p>This is a demo of how to reskin Grails dynamic scaffolding pages. I've
+					used The <a href="http://freeside.co/grails-fields">Fields plugin</a> for customizing
+					form rendering and the <a href="https://github.com/groovydev/twitter-bootstrap-grails-plugin">Twitter
+					Bootstrap Resources plugin</a> to provide the CSS resources. Beyond that it&apos;s a
+					bare Grails app using dynamically scaffolded controllers and views.</p>
+					
+					<p>To install this look &amp; feel into your Grails app you will need to:</p>
+					<ul>
+						<li>Add the following plugins to your <em>BuildConfig.groovy</em>: 
+							<pre>runtime ':twitter-bootstrap:${applicationContext.getBean('pluginManager').getGrailsPlugin('twitter-bootstrap').version}'
+runtime ':fields:${applicationContext.getBean('pluginManager').getGrailsPlugin('fields').version}'</pre>
+						</li>
+						<li>Copy the following files to your project:
+							<pre>src/templates/scaffolding/*
+web-app/css/scaffolding.css
+grails-app/conf/ScaffoldingResources.groovy
+grails-app/taglib/**/*
+grails-app/views/_fields/default/_field.gsp</pre>
+						</li>
+					</ul>
+					
+					<p>You can download, fork &amp; raise issues on this project on <a href="https://github.com/robfletcher/twitter-bootstrap-scaffolding">GitHub</a>.</p>
 				</div>
 
 				<div class="row-fluid">

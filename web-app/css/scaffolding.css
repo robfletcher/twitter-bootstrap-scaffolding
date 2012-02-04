@@ -21,7 +21,14 @@ img#github-ribbon {
 	img#github-ribbon {
 		top: 50px; 
 	}
+	
+	#application-status {
+		display: none;
+	}
 }
+
+/* error page */
+
 pre.snippet code.line {
 	border: none;
 	display: block;
