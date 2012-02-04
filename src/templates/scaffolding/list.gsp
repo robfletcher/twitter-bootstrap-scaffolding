@@ -31,7 +31,10 @@
 			</div>
 
 			<div class="span9">
-				<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+				
+				<div class="page-header">
+					<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+				</div>
 
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="alert-info">\${flash.message}</bootstrap:alert>
