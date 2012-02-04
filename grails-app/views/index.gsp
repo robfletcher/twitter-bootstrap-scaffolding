@@ -32,9 +32,7 @@
 			<section id="main" class="span9">
 
 				<div class="hero-unit">
-					<div class="page-header">
-						<h1>Welcome to Grails</h1>
-					</div>
+					<h1>Welcome to Grails</h1>
 
 					<p>Grails scaffolding with a <a href="http://twitter.github.com/bootstrap" rel="external"><em>Twitter
 					Bootstrap</em></a> look &amp; feel?</p>
@@ -44,35 +42,41 @@
 					form rendering and the <a href="https://github.com/groovydev/twitter-bootstrap-grails-plugin">Twitter
 					Bootstrap Resources plugin</a> to provide the CSS resources. Beyond that it&apos;s a
 					bare Grails app using dynamically scaffolded controllers and views.</p>
+				</div>
 					
-					<p>To install this look &amp; feel into your Grails app you will need to:</p>
-					<ul>
-						<li>Add the following plugins to your <em>BuildConfig.groovy</em>: 
-							<pre>runtime ':twitter-bootstrap:${applicationContext.getBean('pluginManager').getGrailsPlugin('twitter-bootstrap').version}'
+				<div class="row-fluid">
+					
+					<div class="span4">
+						<h2>Try It</h2>
+						<p>This demo app includes a couple of controllers to show off its features.</p>
+						<ul class="nav nav-list">
+							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+								<li><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
+							</g:each>
+						</ul>
+					</div>
+
+					<div class="span4">
+						<h2>Install It</h2>
+						<p>To install this look &amp; feel into your Grails app you will need to:</p>
+						<p>Add the following plugins to your <em>BuildConfig.groovy</em>:</p>
+						<pre>runtime ':twitter-bootstrap:${applicationContext.getBean('pluginManager').getGrailsPlugin('twitter-bootstrap').version}'
 runtime ':fields:${applicationContext.getBean('pluginManager').getGrailsPlugin('fields').version}'</pre>
-						</li>
-						<li>Copy the following files to your project:
-							<pre>src/templates/scaffolding/*
+						<p>Copy the following files to your project:</p>
+						<pre>src/templates/scaffolding/*
 web-app/css/scaffolding.css
 grails-app/conf/ScaffoldingResources.groovy
 grails-app/taglib/**/*
 grails-app/views/_fields/default/_field.gsp</pre>
-						</li>
-					</ul>
+					</div>
 					
-					<p>You can download, fork &amp; raise issues on this project on <a href="https://github.com/robfletcher/twitter-bootstrap-scaffolding">GitHub</a>.</p>
+					<div class="span4">
+						<h2>Fork It</h2>
+						<p>You can download, fork &amp; raise issues on this project on <a href="https://github.com/robfletcher/twitter-bootstrap-scaffolding">GitHub</a>.</p>
+					</div>
+
 				</div>
 
-				<div class="row-fluid">
-					<div class="span12">
-						<ul class="nav nav-list">
-							<li class="nav-header">Available Controllers:</li>
-							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-								<li><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-							</g:each>
-						</ul>
-					</div>
-				</div>
 			</section>
 		</div>
 		
