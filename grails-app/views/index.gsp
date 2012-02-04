@@ -7,7 +7,7 @@
 
 	<body>
 		<div class="row-fluid">
-			<div class="span3">
+			<aside id="application-status" class="span3">
 				<div class="well sidebar-nav">
 					<h5>Application Status</h5>
 					<ul>
@@ -27,9 +27,9 @@
 						</g:each>
 					</ul>
 				</div>
-			</div>
+			</aside>
 
-			<div class="span9">
+			<section id="main" class="span9">
 
 				<div class="hero-unit">
 					<p>Congratulations, you have successfully started your first Grails application! At the moment
@@ -53,7 +53,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
 	</body>
 </html>

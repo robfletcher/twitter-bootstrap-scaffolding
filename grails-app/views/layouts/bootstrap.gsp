@@ -28,7 +28,7 @@
 
 	<body>
 
-		<div class="navbar navbar-fixed-top">
+		<nav class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
 					
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</nav>
 
 		<div class="container-fluid">
 			<g:layoutBody/>
