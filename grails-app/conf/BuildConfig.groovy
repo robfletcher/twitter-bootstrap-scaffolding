@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
         compile ":resources:1.1.6"
 
 		runtime ":twitter-bootstrap:2.0.0.16"
-		runtime ":fields:1.0"
+		runtime ":fields:1.0.1"
 
 		build ":cloud-foundry:1.2.1"
         build ":tomcat:$grailsVersion"
