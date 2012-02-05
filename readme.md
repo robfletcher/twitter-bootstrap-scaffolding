@@ -2,6 +2,10 @@
 
 This is an experimental Grails project using Twitter Bootstrap for scaffolded views.
 
+## Demo
+
+[Check out the demo](http://grails-twitter-bootstrap.cloudfoundry.com) on Cloud Foundry.
+
 ## Installation
 
 You can either use this project as a template or to add to an existing Grails application:
