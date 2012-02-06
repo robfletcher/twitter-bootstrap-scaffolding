@@ -41,6 +41,31 @@ table td.link {
 	white-space: nowrap;
 }
 
+table thead th {
+	white-space: nowrap;
+}
+
+table th.asc a:after,
+table th.desc a:after {
+	content: '';
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-left: 0.3em;
+	vertical-align: text-top;
+	background-image: url(../plugins/twitter-bootstrap-2.0.0.16/img/glyphicons-halflings.png);
+	background-position: 14px 14px;
+	background-repeat: no-repeat;
+}
+
+table th.asc a:after {
+	background-position: -289px -96px;
+}
+
+table th.desc a:after {
+	background-position: -312px -96px;
+}
+
 /* error page */
 
 pre.snippet code.line {
