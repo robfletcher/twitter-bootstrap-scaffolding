@@ -70,6 +70,25 @@ table th.desc a:after {
 	background-position: -312px -96px;
 }
 
+@media (max-width:480px) {
+	table thead, table td { 
+		display: none;
+	}
+	
+	table tr:first-child td {
+		border-top: none;
+	}
+	
+	table td:first-child, table td:last-child {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	table td:last-child {
+		text-align: right;
+	}
+}
+
 /* error page */
 
 pre.snippet code.line {
