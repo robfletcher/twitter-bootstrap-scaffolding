@@ -8,6 +8,10 @@ body {
 	}
 }
 
+.btn {
+	vertical-align: middle;
+}
+
 /* index page */
 
 img#github-ribbon {
