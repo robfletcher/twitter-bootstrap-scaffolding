@@ -9,7 +9,7 @@ body {
 }
 
 .btn {
-	vertical-align: middle;
+	vertical-align: middle; /* ensure buttons line up even when they are different tag types [a, button] */
 }
 
 /* index page */
@@ -23,6 +23,7 @@ img#github-ribbon {
 }
 
 @media (max-width: 768px) {
+	/* prevent the brand name wrapping or overlapping the menu toggle */
 	.navbar .brand {
 		max-width: 75%;
 		overflow: hidden;
@@ -49,6 +50,8 @@ table thead th {
 	white-space: nowrap;
 }
 
+/* icons for sorted column headers */
+
 table th.asc a:after,
 table th.desc a:after {
 	content: '';
@@ -69,6 +72,8 @@ table th.asc a:after {
 table th.desc a:after {
 	background-position: -312px -96px;
 }
+
+/* optimized display for small devices */
 
 @media (max-width:480px) {
 	table thead, table td { 
