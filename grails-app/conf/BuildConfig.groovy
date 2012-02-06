@@ -5,9 +5,9 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.source.level = 1.6
 grails.project.target.level = 1.6
-//grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 grails.project.dependency.resolution = {
+	
     inherits "global"
     log "error"
     checksums true
@@ -33,6 +33,9 @@ grails.project.dependency.resolution = {
 
 		runtime ":twitter-bootstrap:2.0.0.16"
 		runtime ":fields:1.0.1"
+		runtime ":cache-headers:1.1.5"
+		runtime ":cached-resources:1.0"
+		runtime ":zipped-resources:1.0"
 
 		build ":cloud-foundry:1.2.1"
         build ":tomcat:$grailsVersion"
