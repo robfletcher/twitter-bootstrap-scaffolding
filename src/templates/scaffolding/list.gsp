@@ -43,7 +43,6 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th></th>
 						<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 							allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 							props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && it.type != null && !Collection.isAssignableFrom(it.type) }
@@ -55,12 +54,12 @@
 						<%      } else { %>
 							<g:sortableColumn property="${p.name}" title="\${message(code: '${domainClass.propertyName}.${p.name}.label', default: '${p.naturalName}')}" />
 						<%  }   }   } %>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 					<g:each in="\${${propertyName}List}" var="${propertyName}">
 						<tr>
-							<td><g:link action="show" id="\${${propertyName}.id}"><i class="icon-eye-open"></g:link></td>
 						<%  props.eachWithIndex { p, i ->
 						        if (i < 6) {
 									if (p.type == Boolean || p.type == boolean) { %>
@@ -70,6 +69,9 @@
 						<%          } else { %>
 							<td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
 						<%  }   }   } %>
+							<td class="link">
+								<g:link action="show" id="\${${propertyName}.id}" class="btn btn-small">Show &raquo;</g:link>
+							</td>
 						</tr>
 					</g:each>
 					</tbody>

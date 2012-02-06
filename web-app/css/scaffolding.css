@@ -1,3 +1,7 @@
+body {
+	-webkit-text-size-adjust: none;
+}
+
 @media (min-width:980px) {
 	body { 
 		padding-top: 60px; 
@@ -8,19 +12,33 @@
 
 img#github-ribbon {
 	position: absolute; 
-	top: 40px; 
+	top: 0; 
 	right: 0; 
 	border: 0;
+	z-index: 1030; /* no idea where this comes from, lowest value that works */
 }
 
-@media (max-width: 980px) {
-	img#github-ribbon {
-		top: 50px; 
+@media (max-width: 768px) {
+	.navbar .brand {
+		max-width: 75%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	
+	.hero-unit {
+		padding: 20px;
+	}
+
 	#application-status {
 		display: none;
 	}
+}
+
+/* list pages */
+
+table td.link {
+	white-space: nowrap;
 }
 
 /* error page */

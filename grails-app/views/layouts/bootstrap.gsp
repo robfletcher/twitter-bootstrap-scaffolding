@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<meta name="viewport" content="initial-scale = 1.0">
 
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 		<!--[if lt IE 9]>
@@ -38,7 +38,7 @@
 						<span class="icon-bar"></span>
 					</a>
 					
-					<a class="brand" href="${createLink(uri: '/')}"><g:meta name="app.name"/></a>
+					<a class="brand" href="${createLink(uri: '/')}">Grails Twitter Bootstrap</a>
 
 					<div class="nav-collapse">
 						<ul class="nav">							
