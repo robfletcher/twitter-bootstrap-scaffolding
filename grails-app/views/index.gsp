@@ -67,6 +67,8 @@ runtime ':fields:${applicationContext.getBean('pluginManager').getGrailsPlugin('
 web-app/css/scaffolding.css
 grails-app/conf/ScaffoldingResources.groovy
 grails-app/taglib/**/*
+grails-app/views/index.gsp
+grails-app/views/layouts/bootstrap.gsp
 grails-app/views/_fields/default/_field.gsp</pre>
 					</div>
 					
