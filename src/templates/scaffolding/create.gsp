@@ -50,7 +50,7 @@
 				</g:hasErrors>
 
 				<fieldset>
-					<g:form class="form-horizontal" action="create" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+					<g:form class="form-horizontal" action="save" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 						<fieldset>
 							<f:all bean="${propertyName}"/>
 							<div class="form-actions">
