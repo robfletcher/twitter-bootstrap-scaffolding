@@ -54,7 +54,7 @@ class PaginationTagLib {
 		writer << '<ul>'
 
         // display previous link when not on firststep
-		if (laststep > firststep) {
+		if (currentstep > firststep) {
 			linkTagAttrs.class = 'prevLink'
 			linkParams.offset = offset - max
 			writer << '<li'
@@ -98,7 +98,7 @@ class PaginationTagLib {
         }
 
         // display next link when not on laststep
-		if (laststep > firststep) {
+		if (currentstep < laststep) {
 			linkTagAttrs.class = 'nextLink'
 			linkParams.offset = offset + max
 			writer << '<li'
