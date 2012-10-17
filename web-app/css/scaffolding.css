@@ -3,8 +3,8 @@ body {
 }
 
 @media (min-width:980px) {
-	body { 
-		padding-top: 60px; 
+	body {
+		padding-top: 60px;
 	}
 }
 
@@ -15,9 +15,9 @@ body {
 /* index page */
 
 img#github-ribbon {
-	position: absolute; 
-	top: 0; 
-	right: 0; 
+	position: absolute;
+	top: 0;
+	right: 0;
 	border: 0;
 	z-index: 1030; /* no idea where this comes from, lowest value that works */
 }
@@ -30,7 +30,7 @@ img#github-ribbon {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-	
+
 	.hero-unit {
 		padding: 20px;
 	}
@@ -60,8 +60,8 @@ table th.desc a:after {
 	height: 14px;
 	margin-left: 0.3em;
 	vertical-align: text-top;
-	background-image: url(../plugins/twitter-bootstrap-2.0.2.25/img/glyphicons-halflings.png);
-	background-position: 14px 14px;
+    background-image: url(../img/glyphicons-halflings.png);
+    background-position: 14px 14px;
 	background-repeat: no-repeat;
 }
 
@@ -76,19 +76,19 @@ table th.desc a:after {
 /* optimized display for small devices */
 
 @media (max-width:480px) {
-	table thead, table td { 
+	table thead, table td {
 		display: none;
 	}
-	
+
 	table tr:first-child td {
 		border-top: none;
 	}
-	
+
 	table td:first-child, table td:last-child {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	
+
 	table td:last-child {
 		text-align: right;
 	}
