@@ -1,5 +1,9 @@
 /.idea
-*.iml
 /target/
 /*.db
 *.log
+.DS_Store
+/out
+*.iml
+plugin.xml
+*.zip
