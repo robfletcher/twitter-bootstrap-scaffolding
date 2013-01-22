@@ -19,7 +19,7 @@ A plugin based on Rob Fletcher's work to create twitter bootscrap scaffolding.
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/twitter-bootstrap-scaffolding"
+    def documentation = "https://github.com/rscorer/twitter-bootstrap-scaffolding"
 
     // Extra (optional) plugin metadata
 
