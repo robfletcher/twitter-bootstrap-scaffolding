@@ -1,10 +1,10 @@
 class TwitterBootstrapScaffoldingGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.11"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.0 > *"
     // the other plugins this plugin depends on
-    def dependsOn = [twitterBootstrap:'2.1.0.1 > *', fields:'1.3 > *', resources:'1.1.6 > *']
+    def dependsOn = [twitterBootstrap:'* > 2.1.1', fields:'* > 1.3', resources:'* > 1.1.6 ']
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"
