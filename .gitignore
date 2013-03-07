@@ -3,3 +3,6 @@
 /target/
 /*.db
 *.log
+
+.project
+.settings/
