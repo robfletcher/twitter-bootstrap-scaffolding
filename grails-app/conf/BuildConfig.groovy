@@ -29,7 +29,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-		compile "org.jadira.usertype:usertype.jodatime:1.9"
+		compile "org.jadira.usertype:usertype.jodatime:2.0.1"
     }
 
     plugins {
