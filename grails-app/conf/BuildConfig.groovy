@@ -8,7 +8,7 @@ grails.project.target.level = 1.6
 
 grails.project.dependency.resolution = {
     inherits "global"
-    log "error"
+    log "warn"
     checksums true
 
     repositories {
@@ -44,7 +44,6 @@ grails.project.dependency.resolution = {
 		runtime ":cached-resources:1.0"
 		runtime ":zipped-resources:1.0"
 
-		build ":cloud-foundry:1.2.3"
         build ":tomcat:$grailsVersion"
     }
 }
