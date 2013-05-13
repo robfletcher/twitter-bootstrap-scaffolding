@@ -34,11 +34,11 @@ grails.project.dependency.resolution = {
 
     plugins {
         compile ":hibernate:$grailsVersion"
-		compile ":joda-time:1.3.1"
+		compile ":joda-time:1.4"
         compile ":jquery:1.8.3"
-        compile ":resources:1.2.RC2"
+        compile ":resources:1.2"
 
-		runtime ":twitter-bootstrap:2.3.0"
+		runtime ":twitter-bootstrap:2.3.1"
 		runtime ":fields:1.3"
 		runtime ":cache-headers:1.1.5"
 		runtime ":cached-resources:1.0"
