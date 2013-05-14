@@ -1,4 +1,5 @@
 package twitter.bootstrap.scaffolding
+import twitter.bootstrap.scaffolding.Address
 
 import org.joda.time.LocalDate
 
