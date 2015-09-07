@@ -8,21 +8,21 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div class="row-fluid">
+		<div class="row">
 			
-			<div class="span3">
+			<div class="col-sm-3 col-md-3">
 				<div class="well">
 					<ul class="nav nav-list">
 						<li class="nav-header">\${entityName}</li>
 						<li>
 							<g:link class="list" action="list">
-								<i class="icon-list"></i>
+								<span class="glyphicon glyphicon-list"></span>
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
 						</li>
 						<li>
 							<g:link class="create" action="create">
-								<i class="icon-plus"></i>
+								<span class="glyphicon glyphicon-plus"></span>
 								<g:message code="default.create.label" args="[entityName]" />
 							</g:link>
 						</li>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			
-			<div class="span9">
+			<div class="col-sm-9 col-md-9">
 
 				<div class="page-header">
 					<h1><g:message code="default.show.label" args="[entityName]" /></h1>
@@ -70,12 +70,12 @@
 				<g:form>
 					<g:hiddenField name="id" value="\${${propertyName}?.id}" />
 					<div class="form-actions">
-						<g:link class="btn" action="edit" id="\${${propertyName}?.id}">
-							<i class="icon-pencil"></i>
+						<g:link class="btn btn-default" action="edit" id="\${${propertyName}?.id}">
+							<span class="glyphicon glyphicon-pencil icon-white"></span>
 							<g:message code="default.button.edit.label" default="Edit" />
 						</g:link>
-						<button class="btn btn-danger" type="submit" name="_action_delete">
-							<i class="icon-trash icon-white"></i>
+						<button class="btn btn-default btn-danger" type="submit" name="_action_delete">
+							<span class="glyphicon glyphicon-trash icon-white"></span>
 							<g:message code="default.button.delete.label" default="Delete" />
 						</button>
 					</div>
